@@ -13,5 +13,3 @@ do
         echo $reponse 1>&2 # L'affiche à l'utilisateur
 
 done
-
-echo $reponse
