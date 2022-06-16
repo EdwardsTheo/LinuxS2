@@ -1,16 +1,16 @@
 #!/bin/bash
 
-argv=("$@")
-num="$(($# - 1))"
+argv=("$@") #Création d'une liste avec les arguments passés en paramètres du script
+num="$(($# - 1))" # Compte le nombre d'arguments
 
 
-for i in $( eval echo {0..$num} )
+for i in $( eval echo {0..$num} ) 
 do
-        echo "${argv[i]}"
+        echo "${argv[i]}" # Envoie l'user au serveur
+ 
+        read reponse # Lit la réponse du serveur
 
-        read reponse
-
-        echo $reponse 1>&2
+        echo $reponse 1>&2 # L'affiche à l'utilisateur
 
 done
 
